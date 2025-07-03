@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderWise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="page-title">WanderWise</div>
+
+  <div id="hero" class="hero">
+    <!-- First screen -->
+    <div id="screen1" class="screen">
+      <div class="search-container">
+        <i class="fas fa-search search-icon" id="searchIcon"></i>
+        <input type="text" id="searchInput" placeholder="Search location..." />
+      </div>
+    </div>
+
+    <!-- Second screen -->
+    <div id="screen2" class="screen hidden">
+      <div id="cityNameDisplay" class="city-heading"></div>
+      <div class="card-row">
+        <div class="card">Weather<br><span class="emoji">🌤️</span></div>
+        <div class="card">Current Rate</div>
+        <div class="card" id="newsCard">News and Headlines</div>
+
+      </div>
+      <button id="backToSearchBtn" class="back-button"> ◄   Back to Main Page</button>
+    </div>
+
+    <!-- Third screen for weather details -->
+<div id="screen3" class="screen hidden">
+
+  <div id="weatherDetails" class="weather-details">Loading weather...</div>
+  <button id="backButton">◄ Back</button>
+  
+</div>
+<!-- Exchange Screen -->
+<div id="screen4" class="screen hidden">
+  <div id="exchangeDetails" class="exchange-details">Loading...</div>
+  <button id="backButtonExchange">◄ Back</button>
+</div>
+<!-- News Screen -->
+<div id="screen5" class="screen hidden">
+  
+   <h1 class="news-heading">News And Headlines</h1>
+
+    <div id="newsDetails" class="news-scroll-container"></div>
+    <button id="backButtonNews" >◄ Back</button>
+ 
+  
+</div>
+
+</div>
+
+
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

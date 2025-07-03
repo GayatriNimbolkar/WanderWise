@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* 🔹 Page Title */
+.page-title {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* 🔹 Hero area (background image container) */
+.hero {
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/image.png'); /* Local image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 🔹 Shared screen wrapper */
+.screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 🔹 Search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  padding: 10px 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+}
+
+.search-icon {
+  color: #555;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* 🔹 Hide screen */
+.hidden {
+  display: none;
+}
+
+/* 🔹 Cards layout */
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 280px;
+  height: 350px;
+  font-size: 1.2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.city-heading {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 20px;
+  border-radius: 10px;
+  z-index: 5;
+  backdrop-filter: blur(5px);
+  text-transform: capitalize;
+}
+
+#backButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 150px;
+}
+
+.exchangeDetails {
+  color: rgba(0, 0, 0, 0.645);
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.612);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
+  text-align: center;
+  width: 30%;
+}
+#backButtonExchange{
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 150px;
+}
+#backToSearchBtn {
+   padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 150px;
+}
+#screen5 > .card,
+.news-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Style the scrollable horizontal news wrapper */
+.news-wrapper {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  max-width: 55vw; /* adjust depending on your design */
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+  
+
+/* Style each individual news card */
+.news-item {
+  flex: 0 0 300px; /* fixed width for uniform cards */
+  background: rgba(0, 0, 0, 0.585);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  width: 500px;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+.news-heading {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* glow on any background */
+  background: rgba(0, 0, 0, 0.3); /* soft transparent dark background */
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+
+.news-item:hover {
+  transform: scale(1.03);
+}
+
+/* Headline link */
+.news-item h3 a {
+  color: #3ee2f1;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-bottom: 5rem; 
+}
+#news-screen .card {
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+.news-item h3 a:hover {
+  text-decoration: underline;
+}
+.news-item p {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive fallback */
+@media screen and (max-width: 600px) {
+  .news-item {
+    flex: 0 0 180vw;
+  }
+}
+
+#backButtonNews{
+   padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 150px;
+}
