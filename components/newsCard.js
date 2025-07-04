@@ -1,4 +1,4 @@
-// components/newsCard.js
+
 import { fetchNews } from '../apis/news.js';
 
 export function setupNewsCard({ cardElement, getCity, screen2, screen5 }) {

@@ -1,4 +1,4 @@
-// image.js
+
 import { accessKey } from '../config.js';
 
 export async function fetchCityImage(city) {

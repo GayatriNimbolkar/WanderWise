@@ -1,4 +1,3 @@
-// apis/weather.js
 
 import { API_KEY } from '../config.js';
 

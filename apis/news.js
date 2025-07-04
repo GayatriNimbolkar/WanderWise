@@ -1,4 +1,4 @@
-// apis/news.js
+
 
 import { GNEWS_API_KEY } from '../config.js';
 

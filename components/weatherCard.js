@@ -1,4 +1,4 @@
-// components/weatherCard.js
+
 
 import { fetchWeather } from '../apis/weather.js';
 

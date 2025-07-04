@@ -1,4 +1,3 @@
-// script.js
 
 import { fetchCityImage } from './image.js';
 import { setupWeatherCard } from './components/weatherCard.js'; 
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const screen1 = document.getElementById("screen1");
   const screen2 = document.getElementById("screen2");
   const screen3 = document.getElementById("screen3");
-  const screen4 = document.getElementById("screen4"); // for exchange
+  const screen4 = document.getElementById("screen4"); 
   const hero = document.getElementById("hero");
   const cityDisplay = document.getElementById("cityNameDisplay");
   const weatherCard = document.querySelectorAll(".card")[0];

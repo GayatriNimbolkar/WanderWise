@@ -1,4 +1,3 @@
-// components/exchangeCard.js
 
 import { fetchExchangeRateFromCity } from '../apis/exchange.js';
 

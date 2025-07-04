@@ -1,4 +1,4 @@
-// ✅ 1. Get country code from city name
+
 async function getCountryCodeFromCity(city) {
   const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}`;
   const res = await fetch(url);
@@ -14,7 +14,7 @@ async function getCountryCodeFromCity(city) {
   };
 }
 
-// ✅ 2. Get currency code from country code using REST Countries API
+
 async function getCurrencyCode(countryCode) {
   const url = `https://restcountries.com/v3.1/alpha/${countryCode}`;
   const res = await fetch(url);
@@ -26,7 +26,7 @@ async function getCurrencyCode(countryCode) {
   return Object.keys(currencies)[0]; // e.g., "INR"
 }
 
-// ✅ 3. Get exchange rate using Frankfurter API
+
 export async function getExchangeRate(baseCurrency = 'USD', targetCurrency = 'INR') {
   const url = `https://api.frankfurter.app/latest?from=${baseCurrency}&to=${targetCurrency}`;
   console.log("🔗 Fetching exchange rate:", url);
@@ -47,13 +47,13 @@ export async function getExchangeRate(baseCurrency = 'USD', targetCurrency = 'IN
   }
 }
 
-// ✅ 4. High-level function that connects city → currency → rate
+
 export async function fetchExchangeRateFromCity(city) {
   try {
     const { countryCode, countryName } = await getCountryCodeFromCity(city);
     console.log("🌍 Country:", countryCode, countryName);
 
-    const currency = await getCurrencyCode(countryCode); // ← THIS was missing/undefined
+    const currency = await getCurrencyCode(countryCode); 
     console.log("💱 Currency:", currency);
 
     const rate = await getExchangeRate('USD', currency);
