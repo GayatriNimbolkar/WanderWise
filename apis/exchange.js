@@ -21,7 +21,7 @@ async function getCurrencyCode(countryCode) {
   const currencies = data[0]?.currencies;
   if (!currencies) throw new Error("No currency found");
 
-  return Object.keys(currencies)[0]; // e.g., "INR"
+  return Object.keys(currencies)[0]; 
 }
 
 export async function getExchangeRate(baseCurrency = 'USD', targetCurrency = 'INR') {
